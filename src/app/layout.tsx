@@ -7,7 +7,6 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import CookieBanner from "@/components/CookieBanner";
 import Toast from "@/components/Toast";
 import StickyCTA from "@/components/StickyCTA";
-import Breadcrumbs from "@/components/Breadcrumbs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -102,8 +101,6 @@ export default function RootLayout({
         
         {/* Central Page Layout */}
         <div className="flex-1 flex flex-col pt-16">
-          {/* Breadcrumb utility */}
-          <Breadcrumbs />
           {children}
         </div>
 

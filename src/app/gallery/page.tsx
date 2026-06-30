@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { GALLERY } from "@/data/cms";
 
-const CATEGORIES = ["All", "Before/After", "Installations", "Technicians", "Vans"];
+const CATEGORIES = ["All", "Before/After", "Installations"];
 
 export default function GalleryPage() {
   const [activeTab, setActiveTab] = useState("All");
 
   const filteredItems = activeTab === "All"
-    ? GALLERY
+    ? GALLERY.filter((item) => item.category !== "Technicians" && item.category !== "Vans")
     : GALLERY.filter((item) => item.category === activeTab);
 
   return (
