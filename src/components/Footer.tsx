@@ -15,12 +15,20 @@ export default function Footer() {
           
           {/* Brand Panel */}
           <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-3 group">
               <img
                 src="/logo.png"
                 alt="Aquahealth Logo"
                 className="h-10 w-auto object-contain brightness-0 invert"
               />
+              <div className="flex flex-col">
+                <span className="text-xl font-extrabold tracking-tight text-white uppercase font-sans">
+                  AQUA<span className="text-secondary">HEALTH</span>
+                </span>
+                <span className="text-[9px] uppercase tracking-[0.15em] text-zinc-500 font-extrabold leading-none mt-1">
+                  PURE WATER. HONEST SERVICE.
+                </span>
+              </div>
             </Link>
             
             <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed font-semibold">
