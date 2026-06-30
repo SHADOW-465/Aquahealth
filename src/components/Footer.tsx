@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Droplet, Phone, Mail, Clock, MapPin, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { Phone, Mail, Clock, MapPin, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,14 +15,13 @@ export default function Footer() {
           
           {/* Brand Panel */}
           <div className="lg:col-span-4 space-y-4">
-            <a href="#home" className="flex items-center gap-2">
-              <div className="p-2 rounded-xl bg-white/5 text-secondary">
-                <Droplet className="h-6 w-6 fill-current text-secondary" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                Aqua<span className="text-secondary">health</span>
-              </span>
-            </a>
+            <Link href="/" className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="Aquahealth Logo"
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
+            </Link>
             
             <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed font-semibold">
               Premium water purifier sales, installation, and expert repair services across Chennai. Dedicated to providing families with pure drinking water and honest, reliable customer care.

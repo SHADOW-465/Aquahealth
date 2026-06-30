@@ -49,18 +49,12 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="p-2 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 group-hover:scale-105 transition-transform">
-              <Droplet className="h-6 w-6 fill-current animate-pulse-slow text-secondary" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-dark-text">
-                Aqua<span className="text-secondary">health</span>
-              </span>
-              <span className="text-[9px] uppercase tracking-widest text-zinc-400 font-bold leading-none">
-                Pure Water. Honest Service.
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <img
+              src="/logo.png"
+              alt="Aquahealth Logo"
+              className="h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+            />
           </Link>
 
           {/* Desktop Nav Links & Mega Menu */}
