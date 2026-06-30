@@ -598,3 +598,157 @@ export const AREAS: string[] = [
   "Adyar", "Guindy", "Medavakkam", "OMR", "ECR",
   "Anna Nagar", "T Nagar", "Porur"
 ];
+
+export interface ServiceAreaCMS {
+  name: string;
+  slug: string;
+  pincode: string;
+  distance: string;
+  travelTime: string;
+  landmarks: string[];
+  nearbyAreas: string[];
+  testimonials: { name: string; text: string; rating: number }[];
+  faq: { question: string; answer: string }[];
+}
+
+export interface BrandCMS {
+  name: string;
+  slug: string;
+  description: string;
+  commonIssues: string[];
+  maintenanceTips: string[];
+  faq: { question: string; answer: string }[];
+}
+
+export interface ServiceCMS {
+  name: string;
+  slug: string;
+  description: string;
+  pricing: string;
+  benefits: string[];
+  process: string[];
+  faq: { question: string; answer: string }[];
+}
+
+// -------------------------------------------------------------
+// SERVICE AREAS CMS DATA
+// -------------------------------------------------------------
+export const SERVICE_AREAS_CMS: ServiceAreaCMS[] = [
+  {
+    name: "Nanganallur",
+    slug: "nanganallur",
+    pincode: "600061",
+    distance: "2.5 km",
+    travelTime: "10 mins",
+    landmarks: ["Anjaneyar Temple", "Nanganallur Subway", "College Road"],
+    nearbyAreas: ["Adambakkam", "Madipakkam", "Puzhuthivakkam"],
+    testimonials: [
+      { name: "Rajesh Kumar", text: "Nanganallur water is high in minerals. Aquahealth fixed our RO and set the taste perfectly.", rating: 5 }
+    ],
+    faq: [
+      { question: "Do you provide same-day RO service in Nanganallur?", answer: "Yes, bookings before 12:00 PM get same-day inspection and repair in Nanganallur." },
+      { question: "Which purifier brands do you service in Nanganallur?", answer: "We service Kent, Aquaguard, Livpure, AO Smith, and all local custom RO models." }
+    ]
+  },
+  {
+    name: "Velachery",
+    slug: "velachery",
+    pincode: "600042",
+    distance: "6.8 km",
+    travelTime: "20 mins",
+    landmarks: ["Phoenix Marketcity", "Velachery Lake", "Baby Nagar"],
+    nearbyAreas: ["Adyar", "Madipakkam", "Perungudi"],
+    testimonials: [
+      { name: "Priya Sridhar", text: "Quick emergency pump repair done at my Velachery apartment. Highly recommend.", rating: 5 }
+    ],
+    faq: [
+      { question: "How quick can a technician reach Velachery?", answer: "Our Velachery route team usually arrives within 2 to 3 hours of booking." }
+    ]
+  },
+  {
+    name: "Tambaram",
+    slug: "tambaram",
+    pincode: "600045",
+    distance: "14.2 km",
+    travelTime: "35 mins",
+    landmarks: ["Tambaram Railway Station", "MCC College", "Sanatorium"],
+    nearbyAreas: ["Chromepet", "Perungalathur", "Vandalur"],
+    testimonials: [
+      { name: "Balaji Krishnan", text: "Outstanding AMC service. They manage regular cleaning of my Tambaram villa purifier.", rating: 5 }
+    ],
+    faq: [
+      { question: "Do you cover Tambaram West and East?", answer: "Yes, our technicians cover both East and West Tambaram, and nearby suburbs." }
+    ]
+  },
+  {
+    name: "Adyar",
+    slug: "adyar",
+    pincode: "600020",
+    distance: "10.5 km",
+    travelTime: "25 mins",
+    landmarks: ["Adyar Signal", "Theosophical Society", "Gandhi Nagar"],
+    nearbyAreas: ["Thiruvanmiyur", "Besant Nagar", "Kotturpuram"],
+    testimonials: [
+      { name: "Meera Venkatesh", text: "Professional installation of our new under-sink RO system in Adyar kitchen.", rating: 5 }
+    ],
+    faq: [
+      { question: "Do you install under-sink RO purifiers in Adyar?", answer: "Yes, we specialize in compact under-counter installations for modern Adyar kitchens." }
+    ]
+  }
+];
+
+// -------------------------------------------------------------
+// BRANDS CMS DATA
+// -------------------------------------------------------------
+export const BRANDS_CMS: BrandCMS[] = [
+  {
+    name: "Kent",
+    slug: "kent",
+    description: "Kent is a leading Indian brand famous for its double purification (RO+UV+UF) technologies.",
+    commonIssues: ["Blinking filter change light", "Low flow from storage tank", "Constant drain water leakage"],
+    maintenanceTips: ["Replace pre-filter every 4 months", "Change sediment/carbon block annually", "Keep SMPS protected from moisture"],
+    faq: [
+      { question: "What does the blinking red light mean on Kent purifiers?", answer: "It indicates that the filter lifecycle is ending. The system will buzzer beep soon to remind you to change carbon/sediment blocks." },
+      { question: "Do you use genuine Kent-compatible spares?", answer: "Yes, we carry genuine, high-rejection compatible filters, pumps, and membranes suited for Kent models." }
+    ]
+  },
+  {
+    name: "Aquaguard",
+    slug: "aquaguard",
+    description: "Aquaguard by Eureka Forbes features active copper and e-boiling purification methods.",
+    commonIssues: ["Buzzer alert tone", "Taste quality drop", "Auto-shut off valve failure"],
+    maintenanceTips: ["Regularly check TDS levels", "Clean the internal stainless steel tank", "Replace primary sediment cartridge"],
+    faq: [
+      { question: "Why is my Aquaguard showing a red alert buzzer?", answer: "It indicates either a UV lamp failure, filter exhaustion, or electronic module breakdown. We inspect and repair these issues." }
+    ]
+  }
+];
+
+// -------------------------------------------------------------
+// SERVICES CMS DATA
+// -------------------------------------------------------------
+export const SERVICES_CMS: ServiceCMS[] = [
+  {
+    name: "RO Repair",
+    slug: "ro-repair",
+    description: "Comprehensive diagnostic and fixing of any purifier faults, pumps, leaks, or electrical errors.",
+    pricing: "Starting from ₹350 (Parts extra)",
+    benefits: ["Restores flow rate and water taste", "Prevents pump burnout from blockages", "Protects kitchen woodwork from pipe leaks"],
+    process: ["Diagnostic testing", "Component testing", "Parts replacement with approval", "Post-repair TDS validation"],
+    faq: [
+      { question: "What is covered under the RO repair service?", answer: "It covers pump repairs, SMPS power supplies, solenoid valve replacements, and leakage sealing." }
+    ]
+  },
+  {
+    name: "Filter Replacement",
+    slug: "filter-replacement",
+    description: "Swapping out exhausted filtration stages with premium sediment, carbon, and RO membranes.",
+    pricing: "Starting from ₹1,500 (Comprehensive set)",
+    benefits: ["Maintains absolute microbial safety", "Restores output water sweetness", "Protects downstream components"],
+    process: ["Chamber chemical wash", "Swapping carbon and sediment cartridges", "Membrane performance log", "TDS and mineral calibration"],
+    faq: [
+      { question: "How often should filters be replaced?", answer: "Sediment filters annually, pre-filters every 3-6 months, and membranes every 18-24 months." }
+    ]
+  }
+];
+
