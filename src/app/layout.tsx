@@ -100,11 +100,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-dark-text font-sans">
         <Navigation />
         
-        {/* Breadcrumb utility */}
-        <Breadcrumbs />
-        
         {/* Central Page Layout */}
         <div className="flex-1 flex flex-col pt-16">
+          {/* Breadcrumb utility */}
+          <Breadcrumbs />
           {children}
         </div>
 
