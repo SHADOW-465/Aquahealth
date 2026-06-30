@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import CookieBanner from "@/components/CookieBanner";
+import Toast from "@/components/Toast";
+import StickyCTA from "@/components/StickyCTA";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -79,22 +86,6 @@ export default function RootLayout({
     },
     "sameAs": [
       "https://wa.me/919840275122"
-    ],
-    "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Nanganallur" },
-      { "@type": "AdministrativeArea", "name": "Velachery" },
-      { "@type": "AdministrativeArea", "name": "Pallavaram" },
-      { "@type": "AdministrativeArea", "name": "Tambaram" },
-      { "@type": "AdministrativeArea", "name": "Chromepet" },
-      { "@type": "AdministrativeArea", "name": "Adyar" },
-      { "@type": "AdministrativeArea", "name": "Guindy" },
-      { "@type": "AdministrativeArea", "name": "Porur" },
-      { "@type": "AdministrativeArea", "name": "Anna Nagar" },
-      { "@type": "AdministrativeArea", "name": "OMR" },
-      { "@type": "AdministrativeArea", "name": "ECR" },
-      { "@type": "AdministrativeArea", "name": "T Nagar" },
-      { "@type": "AdministrativeArea", "name": "Medavakkam" },
-      { "@type": "AdministrativeArea", "name": "Chennai" }
     ]
   };
 
@@ -107,7 +98,23 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-white text-dark-text font-sans">
-        {children}
+        <Navigation />
+        
+        {/* Breadcrumb utility */}
+        <Breadcrumbs />
+        
+        {/* Central Page Layout */}
+        <div className="flex-1 flex flex-col pt-16">
+          {children}
+        </div>
+
+        <Footer />
+        
+        {/* Floating elements */}
+        <FloatingWhatsApp />
+        <CookieBanner />
+        <Toast />
+        <StickyCTA />
       </body>
     </html>
   );
